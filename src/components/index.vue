@@ -1,4 +1,12 @@
-<template></template>
+<template>
+  <el-container>
+    <el-row>
+      <el-col :span="24">
+        <div class="grid-content bg-purple-dark">123</div>
+      </el-col>
+    </el-row>
+  </el-container>
+</template>
 
 <script>
 export default {
