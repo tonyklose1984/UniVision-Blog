@@ -2,7 +2,7 @@
   "name": "univision-blog",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Famio <famio@qq.com>",
+  "author": "Famio <junyang.liu@torindrive.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -13,10 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "element-ui": "^2.6.3",
     "vue": "^2.5.2",
-    "vue-axios": "^2.1.4",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
