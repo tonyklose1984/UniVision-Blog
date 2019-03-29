@@ -37,9 +37,11 @@
     </mu-container>
     <mu-container class="body-main"></mu-container>
     <mu-container class="body-foot">
-      <mu-bottom-nav class="index-bottom-nav">
-        <mu-bottom-nav-item title="苏ICP备15006533号-4" :ripple="false"></mu-bottom-nav-item>
-      </mu-bottom-nav>
+      <mu-row gutter class="beian">
+        <mu-col class="center" span="12" sm="12" md="12" lg="12" xl="12">
+          <div class="grid-cell">苏ICP备15006533号-4</div>
+        </mu-col>
+      </mu-row>
     </mu-container>
   </div>
 </template>
@@ -115,7 +117,16 @@ export default {
 .index-bottom-nav {
   background-color: #fafafa;
 }
+.beian {
+  position: absolute;
+  width: 90%;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  bottom: 20px;
+  left: 5%;
+}
 .center {
   margin: auto auto;
+  text-align: center;
 }
 </style>
