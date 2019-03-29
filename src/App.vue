@@ -9,7 +9,9 @@
         <mu-button icon slot="left" @click="open = !open">
           <mu-icon value="menu"></mu-icon>
         </mu-button>
-        <span>Famio's Library</span>
+        <span>
+          <a href="/">Famio's Library</a>
+        </span>
       </mu-appbar>
     </div>
     <div>
