@@ -74,16 +74,13 @@ export default {
   margin-top: 20px;
 }
 .body-head {
-  /* border: 1px solid red; */
 }
 .body-main {
   margin: 50px auto 0 auto;
   padding: 24px 24px;
-  /* border: 1px solid black; */
 }
 .body-foot {
   margin: 50px auto 0 auto;
-  /* border: 1px solid blue; */
 }
 .index-search-div {
   display: flex;
@@ -92,7 +89,6 @@ export default {
   height: 44px;
   border-radius: 24px;
   margin: 50px auto 0 auto;
-  /* width: 60%; */
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 20px;
@@ -102,10 +98,8 @@ export default {
   outline: none;
   height: 34px;
   width: 92%;
-  /* margin: auto auto; */
 }
 .index-search-div-icon {
-  /* margin: auto auto; */
   border-radius: 50%;
 }
 .index-search-div-icon > mu-icon {

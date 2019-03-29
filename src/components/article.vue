@@ -45,38 +45,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.index-search-div {
-  display: flex;
-  background: white;
-  border: 1px solid #dfe1e5;
-  height: 44px;
-  border-radius: 24px;
-  margin: 50px auto 0 auto;
-  width: 60%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px 0 20px;
-}
-.index-search-div-input {
-  border: none;
-  outline: none;
-  height: 34px;
-  width: 92%;
-  /* margin: auto auto; */
-}
-.index-search-div-icon {
-  /* margin: auto auto; */
-  border-radius: 50%;
-}
-.index-search-div-icon > mu-icon {
-  margin: auto auto;
-}
-.m-t-5 {
-  margin-top: 50px;
-}
-.m-b-2 {
-  margin-bottom: 20px;
-}
 .doc-head {
   text-align: center;
 }

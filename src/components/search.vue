@@ -90,10 +90,8 @@ export default {
   outline: none;
   height: 34px;
   width: 92%;
-  /* margin: auto auto; */
 }
 .index-search-div-icon {
-  /* margin: auto auto; */
   border-radius: 50%;
 }
 .index-search-div-icon > mu-icon {
