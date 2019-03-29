@@ -1,27 +1,39 @@
 <template>
   <div class="page-container">
     <mu-container class="body-head">
-      <div class="index-logo">
-        <img src="../../static/images/logo.png">
-      </div>
-      <mu-paper class="demo-paper index-search-div" :z-depth="1">
-        <input
-          class="index-search-div-input"
-          type="text"
-          placeholder="寻你所想..."
-          v-model="keywords"
-          @keyup.enter="toSearch(keywords)"
-        >
-        <mu-button
-          class="index-search-div-icon"
-          icon
-          small
-          color="grey"
-          @click="toSearch(keywords)"
-        >
-          <mu-icon value="search" size="30" color="grey400"></mu-icon>
-        </mu-button>
-      </mu-paper>
+      <mu-row gutter>
+        <mu-col class="center" span="12" sm="12" md="8" lg="8" xl="8">
+          <div class="grid-cell">
+            <div class="index-logo">
+              <img src="../../static/images/logo.png">
+            </div>
+          </div>
+        </mu-col>
+      </mu-row>
+      <mu-row gutter>
+        <mu-col class="center" span="12" sm="12" md="8" lg="8" xl="8">
+          <div class="grid-cell">
+            <mu-paper class="demo-paper index-search-div" :z-depth="1">
+              <input
+                class="index-search-div-input"
+                type="text"
+                placeholder="寻你所想..."
+                v-model="keywords"
+                @keyup.enter="toSearch(keywords)"
+              >
+              <mu-button
+                class="index-search-div-icon"
+                icon
+                small
+                color="grey"
+                @click="toSearch(keywords)"
+              >
+                <mu-icon value="search" size="30" color="grey400"></mu-icon>
+              </mu-button>
+            </mu-paper>
+          </div>
+        </mu-col>
+      </mu-row>
     </mu-container>
     <mu-container class="body-main"></mu-container>
     <mu-container class="body-foot">
@@ -80,7 +92,7 @@ export default {
   height: 44px;
   border-radius: 24px;
   margin: 50px auto 0 auto;
-  width: 60%;
+  /* width: 60%; */
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 20px;
@@ -109,5 +121,8 @@ export default {
 }
 .index-bottom-nav {
   background-color: #fafafa;
+}
+.center {
+  margin: auto auto;
 }
 </style>

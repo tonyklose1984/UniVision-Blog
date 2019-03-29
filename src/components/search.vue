@@ -17,22 +17,6 @@
       <mu-divider></mu-divider>
     </mu-container>
     <mu-container class="body-main">
-      <!-- <div class="search-result-item" v-for="article in result.data" :key="article.id">
-        <h3 class="title" @click="toArticle(article.id)">{{article.title}}</h3>
-        <div class="item-body" v-html="article.content.slice(0,150)+'...'"></div>
-        <div class="item-footer">{{article.created_at}}</div>
-      </div>-->
-      <!-- <mu-container>
-        <mu-card
-          class="search-card"
-          v-for="article in result.data"
-          :key="article.id"
-          @click="toArticle(article.id)"
-        >
-          <mu-card-title :title="article.title" :sub-title="article.created_at"></mu-card-title>
-          <mu-card-text v-html="article.content.slice(0,150)+'...'"></mu-card-text>
-        </mu-card>
-      </mu-container>-->
       <mu-list
         textline="two-line"
         v-for="article in result.data"

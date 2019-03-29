@@ -27,10 +27,7 @@ export default new Router({
     {
       path: "/article",
       name: "Article",
-      component: Article,
-      meta: {
-        title: "刘俊洋的知识库"
-      }
+      component: Article
     }
   ]
 });
