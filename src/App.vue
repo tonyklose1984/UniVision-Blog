@@ -10,7 +10,7 @@
           <mu-icon value="menu"></mu-icon>
         </mu-button>
         <span>
-          <a href="/">Famio's Library</a>
+          <a class="site_title" href="/">Famio's Library</a>
         </span>
       </mu-appbar>
     </div>
@@ -48,8 +48,8 @@ export default {
 };
 </script>
 
-<style>
-a {
+<style scoped>
+.site_title {
   color: black;
   text-decoration: none;
 }
