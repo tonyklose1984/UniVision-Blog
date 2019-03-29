@@ -18,7 +18,8 @@
     "muse-ui-loading": "^0.2.0",
     "muse-ui-progress": "^0.1.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-wechat-title": "^2.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

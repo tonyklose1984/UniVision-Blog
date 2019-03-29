@@ -11,17 +11,26 @@ export default new Router({
     {
       path: "/",
       name: "Index",
-      component: Index
+      component: Index,
+      meta: {
+        title: "刘俊洋的知识库"
+      }
     },
     {
       path: "/search",
       name: "Search",
-      component: Search
+      component: Search,
+      meta: {
+        title: "搜索 - 刘俊洋的知识库"
+      }
     },
     {
       path: "/article",
       name: "Article",
-      component: Article
+      component: Article,
+      meta: {
+        title: "刘俊洋的知识库"
+      }
     }
   ]
 });

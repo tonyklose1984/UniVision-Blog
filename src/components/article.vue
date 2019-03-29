@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <div class="page-container" v-wechat-title="result.title+' - 刘俊洋的知识库'">
     <mu-container class="body-head"></mu-container>
     <mu-container class="body-main">
       <div class="doc-head">

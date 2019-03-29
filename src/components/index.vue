@@ -5,7 +5,13 @@
         <img src="../../static/images/logo.png">
       </div>
       <mu-paper class="demo-paper index-search-div" :z-depth="1">
-        <input class="index-search-div-input" type="text" placeholder="寻你所想..." v-model="keywords">
+        <input
+          class="index-search-div-input"
+          type="text"
+          placeholder="寻你所想..."
+          v-model="keywords"
+          @keyup.enter="toSearch(keywords)"
+        >
         <mu-button
           class="index-search-div-icon"
           icon

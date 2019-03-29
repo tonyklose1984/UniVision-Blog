@@ -7,6 +7,7 @@
           type="text"
           :placeholder="keywords"
           v-model="keywords"
+          @keyup.enter="search(keywords)"
         >
         <mu-button class="index-search-div-icon" icon small color="grey" @click="search(keywords)">
           <mu-icon value="search" size="30" color="grey400"></mu-icon>
