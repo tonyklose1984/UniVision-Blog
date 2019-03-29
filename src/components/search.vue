@@ -1,18 +1,30 @@
 <template>
   <div class="page-container">
     <mu-container class="body-head">
-      <mu-paper class="demo-paper index-search-div" :z-depth="1">
-        <input
-          class="index-search-div-input"
-          type="text"
-          :placeholder="keywords"
-          v-model="keywords"
-          @keyup.enter="search(keywords)"
-        >
-        <mu-button class="index-search-div-icon" icon small color="grey" @click="search(keywords)">
-          <mu-icon value="search" size="30" color="grey400"></mu-icon>
-        </mu-button>
-      </mu-paper>
+      <mu-row gutter>
+        <mu-col class="center" span="10" sm="12" md="8" lg="8" xl="8">
+          <div class="grid-cell">
+            <mu-paper class="demo-paper index-search-div" :z-depth="1">
+              <input
+                class="index-search-div-input"
+                type="text"
+                placeholder="寻你所想..."
+                v-model="keywords"
+                @keyup.enter="search(keywords)"
+              >
+              <mu-button
+                class="index-search-div-icon"
+                icon
+                small
+                color="grey"
+                @click="search(keywords)"
+              >
+                <mu-icon value="search" size="30" color="grey400"></mu-icon>
+              </mu-button>
+            </mu-paper>
+          </div>
+        </mu-col>
+      </mu-row>
       <div class="captain m-t-5 m-b-2">搜索结果</div>
       <mu-divider></mu-divider>
     </mu-container>
@@ -80,7 +92,6 @@ export default {
   height: 44px;
   border-radius: 24px;
   margin: 50px auto 0 auto;
-  width: 60%;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 20px;
@@ -116,5 +127,8 @@ export default {
 }
 .search-card:hover {
   background-color: rgba(0, 0, 0, 0.01);
+}
+.center {
+  margin: auto auto;
 }
 </style>

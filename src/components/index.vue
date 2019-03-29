@@ -38,8 +38,7 @@
     <mu-container class="body-main"></mu-container>
     <mu-container class="body-foot">
       <mu-bottom-nav class="index-bottom-nav">
-        <mu-bottom-nav-item title="苏ICP备15006533号-4" icon="website" :ripple="false"></mu-bottom-nav-item>
-        <mu-bottom-nav-item title="关于" icon="info" :ripple="false"></mu-bottom-nav-item>
+        <mu-bottom-nav-item title="苏ICP备15006533号-4" :ripple="false"></mu-bottom-nav-item>
       </mu-bottom-nav>
     </mu-container>
   </div>
