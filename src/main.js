@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from "vue";
 import App from "./App";
-import router from "./router";
 import MuseUI from "muse-ui";
 import axios from "axios";
 import Loading from "muse-ui-loading";
@@ -15,6 +14,8 @@ Vue.use(Loading);
 Vue.use(VueWechatTitle);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
+
+import router from "./router";
 
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */
