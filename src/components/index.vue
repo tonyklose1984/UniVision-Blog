@@ -20,8 +20,7 @@
     <mu-container class="body-main"></mu-container>
     <mu-container class="body-foot">
       <mu-bottom-nav class="index-bottom-nav">
-        <mu-bottom-nav-item title="备案" icon="website" :ripple="false"></mu-bottom-nav-item>
-        <mu-bottom-nav-item title="Favorites" icon="favorite" :ripple="false"></mu-bottom-nav-item>
+        <mu-bottom-nav-item title="苏ICP备15006533号-4" icon="website" :ripple="false"></mu-bottom-nav-item>
         <mu-bottom-nav-item title="关于" icon="info" :ripple="false"></mu-bottom-nav-item>
       </mu-bottom-nav>
     </mu-container>
@@ -30,7 +29,7 @@
 
 <script>
 export default {
-  name: "index",
+  name: "Index",
   data() {
     return {
       keywords: ""
@@ -38,7 +37,7 @@ export default {
   },
   methods: {
     toSearch(keywords) {
-      this.$router.push({ name: "Search", params: { keywords: keywords } });
+      this.$router.push({ name: "Search", query: { keywords: keywords } });
     }
   },
   watch: {

@@ -5,9 +5,12 @@ import App from "./App";
 import router from "./router";
 import MuseUI from "muse-ui";
 import axios from "axios";
+import Loading from "muse-ui-loading";
+import "muse-ui-loading/dist/muse-ui-loading.css";
 import "muse-ui/dist/muse-ui.css";
 
 Vue.use(MuseUI);
+Vue.use(Loading);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 
