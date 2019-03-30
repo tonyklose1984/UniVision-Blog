@@ -55,7 +55,7 @@ export default {
     };
   },
   mounted() {
-    this.WXshare(location.href);
+    this.WXshare(location.href, "刘俊洋的知识库");
   },
   methods: {
     toSearch(keywords) {

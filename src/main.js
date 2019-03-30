@@ -16,11 +16,10 @@ Vue.use(VueWechatTitle);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 
-Vue.prototype.WXshare = function(url) {
+Vue.prototype.WXshare = function(url, title) {
   let oriUrl = location.href.split("#")[0].toLowerCase();
   let Base64 = require("js-base64").Base64;
   let site = Base64.encode(oriUrl);
-  let title = "刘俊洋的知识库";
   this.$axios
     .get("https://core.liujunyang.com/api/weixin/share/" + site)
     .then(function(res) {
@@ -42,7 +41,7 @@ Vue.prototype.WXshare = function(url) {
     //需在用户可能点击分享按钮前就先调用
     wx.onMenuShareAppMessage({
       title: title, // 分享标题
-      desc: "带你一起分享码农的乐趣", // 分享描述
+      desc: "分享一切尽可能让你看得懂的东西。", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
       imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
       success: function() {}
@@ -50,7 +49,7 @@ Vue.prototype.WXshare = function(url) {
 
     wx.onMenuShareTimeline({
       title: title, // 分享标题
-      desc: "带你一起分享码农的乐趣", // 分享描述
+      desc: "分享一切尽可能让你看得懂的东西。", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
       imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
       success: function() {}
