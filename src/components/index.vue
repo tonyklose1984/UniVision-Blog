@@ -85,7 +85,7 @@ export default {
   border: 1px solid #dfe1e5;
   height: 44px;
   border-radius: 24px;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 20px;
