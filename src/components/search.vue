@@ -57,7 +57,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$route);
     this.search(this.keywords);
     this.WXshare(location.href, "搜索结果");
   },
@@ -70,7 +69,6 @@ export default {
         .post("https://core.liujunyang.com/blog/articles/search", post)
         .then(function(res) {
           that.result = res.data;
-          console.log(that.result);
           loading.close();
         })
         .catch(function(res) {

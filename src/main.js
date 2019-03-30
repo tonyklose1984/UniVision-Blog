@@ -23,9 +23,8 @@ Vue.prototype.WXshare = function(url, title) {
   this.$axios
     .get("https://core.liujunyang.com/api/weixin/share/" + site)
     .then(function(res) {
-      console.log(res.data);
       wx.config({
-        debug: true, // 开启调试模式,
+        debug: false, // 开启调试模式,
         appId: res.data.appid, // 必填，企业号的唯一标识，此处填写企业号corpid
         timestamp: res.data.timestamp, // 必填，生成签名的时间戳
         nonceStr: res.data.noncestr, // 必填，生成签名的随机串

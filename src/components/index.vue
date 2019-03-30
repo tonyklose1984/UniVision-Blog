@@ -65,7 +65,6 @@ export default {
   watch: {
     keywords: function(value, oldValue) {
       this.keywords = value;
-      console.log(this.keywords);
     }
   }
 };
