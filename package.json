@@ -20,7 +20,8 @@
     "muse-ui-progress": "^0.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-wechat-title": "^2.0.5"
+    "vue-wechat-title": "^2.0.5",
+    "weixin-js-sdk": "^1.4.0-test"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

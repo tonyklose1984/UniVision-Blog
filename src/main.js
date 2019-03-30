@@ -6,6 +6,7 @@ import MuseUI from "muse-ui";
 import axios from "axios";
 import Loading from "muse-ui-loading";
 import VueWechatTitle from "vue-wechat-title";
+import wx from "weixin-js-sdk";
 import "muse-ui-loading/dist/muse-ui-loading.css";
 import "muse-ui/dist/muse-ui.css";
 
@@ -24,6 +25,14 @@ Vue.prototype.WXshare = function(url) {
     .get("https://core.liujunyang.com/api/weixin/share/" + site)
     .then(function(res) {
       console.log(res.data);
+      wx.config({
+        debug: true, // 开启调试模式,
+        appId: res.data.appId, // 必填，企业号的唯一标识，此处填写企业号corpid
+        timestamp: res.data.timestamp, // 必填，生成签名的时间戳
+        nonceStr: res.data.noncestr, // 必填，生成签名的随机串
+        signature: res.data.signature, // 必填，签名，见附录1
+        jsApiList: ["onMenuShareAppMessage", "onMenuShareTimeline"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+      });
     })
     .catch(function(res) {
       console.log(res);
