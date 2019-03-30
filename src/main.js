@@ -44,7 +44,7 @@ Vue.prototype.WXshare = function(url) {
       title: title, // 分享标题
       desc: "带你一起分享码农的乐趣", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: "static/images/wx_logo.png", // 分享图标
+      imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
       success: function() {}
     });
 
@@ -52,7 +52,7 @@ Vue.prototype.WXshare = function(url) {
       title: title, // 分享标题
       desc: "带你一起分享码农的乐趣", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: "static/images/wx_logo.png", // 分享图标
+      imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
       success: function() {}
     });
   });
