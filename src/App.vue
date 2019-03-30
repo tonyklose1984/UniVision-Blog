@@ -1,10 +1,6 @@
 <template>
   <div>
     <div>
-      <link
-        rel="stylesheet"
-        href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css"
-      >
       <mu-appbar style="width: 100%;" color="#fafafa" z-depth="0" textColor="black">
         <mu-button icon slot="left" @click="open = !open">
           <mu-icon value="menu"></mu-icon>

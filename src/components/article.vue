@@ -49,21 +49,31 @@ export default {
 .doc-head {
   text-align: center;
 }
+.doc-body {
+  line-height: 30px;
+  font-family: "Roboto";
+}
 /* 文档样式 */
+p {
+  margin: 10px 0;
+}
 pre {
+  font-family: "Roboto";
   background-color: #f1f1f1;
   color: black;
   border-left: 6px solid lightgrey;
   padding: 5px 5px 5px 10px;
   font-size: 12px;
+  margin: 20px 0;
 }
 code {
-  background-color: rgb(250, 219, 223);
-  color: rgb(245, 94, 115);
+  font-family: "Roboto";
+  background-color: rgba(250, 219, 223, 0.6);
+  color: rgba(245, 94, 115, 0.9);
   margin: 0 5px;
   padding: 2px 4px;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 300;
 }
 img {
   border-radius: 8px;

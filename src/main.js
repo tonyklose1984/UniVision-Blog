@@ -8,7 +8,9 @@ import Loading from "muse-ui-loading";
 import VueWechatTitle from "vue-wechat-title";
 import wx from "weixin-js-sdk";
 import "muse-ui-loading/dist/muse-ui-loading.css";
+import "./font/font.css";
 import "muse-ui/dist/muse-ui.css";
+import "typeface-roboto";
 
 Vue.use(MuseUI);
 Vue.use(Loading);
