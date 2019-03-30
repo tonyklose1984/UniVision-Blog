@@ -17,20 +17,8 @@
     <div>
       <router-view/>
     </div>
-    <div>
-      <mu-drawer :open.sync="open" :docked="docked" :right="position === 'right'">
-        <mu-list>
-          <mu-list-item button>
-            <mu-list-item-title>Menu Item 1</mu-list-item-title>
-          </mu-list-item>
-          <mu-list-item button>
-            <mu-list-item-title>Menu Item 2</mu-list-item-title>
-          </mu-list-item>
-          <mu-list-item @click="open = false" button>
-            <mu-list-item-title>Close</mu-list-item-title>
-          </mu-list-item>
-        </mu-list>
-      </mu-drawer>
+    <div class="beian">
+      <div>苏ICP备15006533号-4</div>
     </div>
   </div>
 </template>
@@ -52,5 +40,17 @@ export default {
 .site_title {
   color: black;
   text-decoration: none;
+}
+.beian {
+  position: fixed;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  bottom: 10px;
+  padding-top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 </style>

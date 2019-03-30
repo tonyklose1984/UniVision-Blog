@@ -36,9 +36,7 @@
       </mu-row>
     </mu-container>
     <mu-container class="body-main"></mu-container>
-    <mu-container class="body-foot">
-      <div class="beian">苏ICP备15006533号-4</div>
-    </mu-container>
+    <mu-container class="body-foot"></mu-container>
   </div>
 </template>
 
@@ -114,15 +112,6 @@ export default {
 }
 .index-bottom-nav {
   background-color: #fafafa;
-}
-.beian {
-  position: absolute;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.3);
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  text-align: center;
 }
 .center {
   margin: auto auto;
