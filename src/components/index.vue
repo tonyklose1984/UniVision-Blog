@@ -68,7 +68,7 @@ export default {
 <style scoped>
 .page-container {
   padding: 30px 30px;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 .body-head {
 }

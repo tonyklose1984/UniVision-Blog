@@ -14,7 +14,7 @@
               value="whatshot"
               color="red"
               size="20"
-              style="vertical-align: middle; margin-left:-5px;"
+              style="vertical-align: middle; margin:-3px 0 0 -5px;"
             ></mu-icon>'s Library
           </a>
         </span>
@@ -46,6 +46,7 @@ export default {
 .site_title {
   color: black;
   text-decoration: none;
+  text-shadow: 5px 1px 10px rgba(0, 0, 0, 0.2);
 }
 .beian {
   position: fixed;
