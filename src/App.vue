@@ -2,10 +2,10 @@
   <div>
     <div>
       <mu-appbar
-        style="width: 100%; text-align:center;"
+        style="width: 100%; text-align:center; background: linear-gradient(to right, #3f8aff, #8543ff);"
         color="#fafafa"
-        z-depth="0"
-        textColor="black"
+        z-depth="4"
+        textColor="white"
       >
         <span class="color">
           <a class="site_title" href="/">
@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 .site_title {
-  color: black;
+  color: white;
   text-decoration: none;
   text-shadow: 5px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -59,11 +59,5 @@ export default {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f8f8f8;
-}
-.color {
-  background-image: url("assets/logo-color.png");
-  background-repeat: no-repeat;
-  background-size: auto 120%;
-  background-position: right;
 }
 </style>

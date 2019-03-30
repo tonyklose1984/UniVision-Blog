@@ -64,6 +64,14 @@ router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */
   if (to.meta.title) {
     document.title = to.meta.title;
+    if (to.meta.type != "article") {
+      document
+        .querySelector("body")
+        .setAttribute(
+          "style",
+          "background: linear-gradient(to right, #3f8aff, #8543ff);"
+        );
+    }
   }
   next();
 });

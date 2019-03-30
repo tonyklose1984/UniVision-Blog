@@ -4,16 +4,14 @@
       <mu-row gutter>
         <mu-col class="center" span="12" sm="12" md="8" lg="8" xl="8">
           <div class="grid-cell">
-            <div class="index-logo">
-              <img src="../../static/images/logo.png">
-            </div>
+            <div class="index-logo"></div>
           </div>
         </mu-col>
       </mu-row>
       <mu-row gutter>
         <mu-col class="center" span="12" sm="12" md="8" lg="8" xl="8">
           <div class="grid-cell">
-            <mu-paper class="demo-paper index-search-div" :z-depth="1">
+            <mu-paper class="demo-paper index-search-div" :z-depth="4">
               <input
                 class="index-search-div-input"
                 type="text"
@@ -66,9 +64,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+* {
+}
 .page-container {
   padding: 30px 30px;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .body-head {
 }
@@ -103,12 +103,11 @@ export default {
   margin: auto auto;
 }
 .index-logo {
-  display: flex;
-  align-items: center;
-}
-.index-logo > img {
-  margin: auto auto;
-  width: 200px;
+  height: 300px;
+  background-image: url("../assets/index-logo.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
 }
 .index-bottom-nav {
   background-color: #fafafa;

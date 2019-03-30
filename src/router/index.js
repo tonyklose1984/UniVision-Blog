@@ -28,7 +28,9 @@ export default new Router({
       path: "/article",
       name: "Article",
       component: Article,
-      meta: {}
+      meta: {
+        type: "article"
+      }
     }
   ]
 });
