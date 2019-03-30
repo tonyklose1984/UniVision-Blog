@@ -27,7 +27,7 @@ Vue.prototype.WXshare = function(url) {
       console.log(res.data);
       wx.config({
         debug: true, // 开启调试模式,
-        appId: res.data.appId, // 必填，企业号的唯一标识，此处填写企业号corpid
+        appId: res.data.appid, // 必填，企业号的唯一标识，此处填写企业号corpid
         timestamp: res.data.timestamp, // 必填，生成签名的时间戳
         nonceStr: res.data.noncestr, // 必填，生成签名的随机串
         signature: res.data.signature, // 必填，签名，见附录1
