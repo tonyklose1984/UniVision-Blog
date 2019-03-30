@@ -27,7 +27,7 @@ Vue.prototype.WXshare = function(url) {
       console.log(res.data);
       wx.config({
         debug: true, // 开启调试模式,
-        appId: res.data.appid, // 必填，企业号的唯一标识，此处填写企业号corpid
+        appId: res.data.appId, // 必填，企业号的唯一标识，此处填写企业号corpid
         timestamp: res.data.timestamp, // 必填，生成签名的时间戳
         nonceStr: res.data.noncestr, // 必填，生成签名的随机串
         signature: res.data.signature, // 必填，签名，见附录1
@@ -44,7 +44,7 @@ Vue.prototype.WXshare = function(url) {
       title: title, // 分享标题
       desc: "带你一起分享码农的乐趣", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: "src/assets/logo.png", // 分享图标
+      imgUrl: "static/images/wx_logo.png", // 分享图标
       success: function() {}
     });
 
@@ -52,7 +52,7 @@ Vue.prototype.WXshare = function(url) {
       title: title, // 分享标题
       desc: "带你一起分享码农的乐趣", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: "src/assets/logo.png", // 分享图标
+      imgUrl: "static/images/wx_logo.png", // 分享图标
       success: function() {}
     });
   });
