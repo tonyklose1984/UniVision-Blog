@@ -85,6 +85,11 @@ export default {
         });
     },
     toArticle(id) {
+      // this.$router.push({
+      //   name: "Article",
+      //   query: { id: id },
+      //   replace: true
+      // });
       let route = this.$router.resolve({
         name: "Article",
         query: { id: id },

@@ -23,6 +23,9 @@ export default {
   },
   mounted() {
     this.loadArticle(this.$route.query.id);
+    document
+      .querySelector("body")
+      .setAttribute("style", "background: #fafafa;");
     // this.WXshare(location.href, this.result.title);
   },
   methods: {
