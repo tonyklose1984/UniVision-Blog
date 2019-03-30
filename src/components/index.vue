@@ -106,7 +106,7 @@ export default {
   height: 300px;
   background-image: url("../assets/index-logo.png");
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: auto 150px;
   background-position: center;
 }
 .index-bottom-nav {
