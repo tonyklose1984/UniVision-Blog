@@ -44,10 +44,6 @@ export default {
       open: false,
       position: "left"
     };
-  },
-  mounted() {
-    console.log(location.href.split("#"));
-    // this.WXshare(location.href.split("#")[0].toLowerCase());
   }
 };
 </script>

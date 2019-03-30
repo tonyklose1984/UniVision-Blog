@@ -37,11 +37,7 @@
     </mu-container>
     <mu-container class="body-main"></mu-container>
     <mu-container class="body-foot">
-      <mu-row gutter class="beian">
-        <mu-col class="center" span="12" sm="12" md="12" lg="12" xl="12">
-          <div class="grid-cell">苏ICP备15006533号-4</div>
-        </mu-col>
-      </mu-row>
+      <div class="beian">苏ICP备15006533号-4</div>
     </mu-container>
   </div>
 </template>
@@ -121,14 +117,14 @@ export default {
 }
 .beian {
   position: absolute;
-  width: 90%;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
   bottom: 20px;
-  left: 5%;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .center {
   margin: auto auto;
-  text-align: center;
 }
 </style>
