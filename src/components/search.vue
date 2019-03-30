@@ -59,6 +59,7 @@ export default {
   mounted() {
     console.log(this.$route);
     this.search(this.keywords);
+    this.WXshare(location.href.split("#")[0].toLowerCase());
   },
   methods: {
     search(keywords) {

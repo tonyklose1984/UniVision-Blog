@@ -54,6 +54,10 @@ export default {
       keywords: ""
     };
   },
+  mounted() {
+    console.log(location.href);
+    this.WXshare(123);
+  },
   methods: {
     toSearch(keywords) {
       this.$router.push({ name: "Search", query: { keywords: keywords } });
