@@ -59,7 +59,7 @@ export default {
   mounted() {
     console.log(this.$route);
     this.search(this.keywords);
-    this.WXshare(location.href, "搜索 - " + this.keywords);
+    this.WXshare(location.href, "搜索结果");
   },
   methods: {
     search(keywords) {

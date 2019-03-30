@@ -41,7 +41,7 @@ Vue.prototype.WXshare = function(url, title) {
     //需在用户可能点击分享按钮前就先调用
     wx.onMenuShareAppMessage({
       title: title, // 分享标题
-      desc: "分享一切尽可能让你看得懂的东西。", // 分享描述
+      desc: "刘俊洋的知识库：分享一切尽可能让你看得懂的东西。", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
       imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
       success: function() {}
@@ -49,7 +49,7 @@ Vue.prototype.WXshare = function(url, title) {
 
     wx.onMenuShareTimeline({
       title: title, // 分享标题
-      desc: "分享一切尽可能让你看得懂的东西。", // 分享描述
+      desc: "刘俊洋的知识库：分享一切尽可能让你看得懂的东西。", // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
       imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
       success: function() {}

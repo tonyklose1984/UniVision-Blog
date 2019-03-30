@@ -23,7 +23,7 @@ export default {
   },
   mounted() {
     this.loadArticle(this.$route.query.id);
-    this.WXshare(location.href, this.result.title);
+    // this.WXshare(location.href, this.result.title);
   },
   methods: {
     loadArticle(id) {
@@ -32,8 +32,8 @@ export default {
       this.$axios
         .get("https://core.liujunyang.com/blog/articles/" + id)
         .then(function(res) {
+          that.WXshare(location.href, res.data.data.title);
           that.result = res.data.data;
-          console.log(that.result);
           loading.close();
         })
         .catch(function(res) {
