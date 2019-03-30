@@ -1,12 +1,22 @@
 <template>
   <div>
     <div>
-      <mu-appbar style="width: 100%;" color="#fafafa" z-depth="0" textColor="black">
-        <mu-button icon slot="left" @click="open = !open">
-          <mu-icon value="menu"></mu-icon>
-        </mu-button>
+      <mu-appbar
+        style="width: 100%; text-align:center;"
+        color="#fafafa"
+        z-depth="0"
+        textColor="black"
+      >
         <span>
-          <a class="site_title" href="/">Famio's Library</a>
+          <a class="site_title" href="/">
+            Fami
+            <mu-icon
+              value="whatshot"
+              color="red"
+              size="20"
+              style="vertical-align: middle; margin-left:-5px;"
+            ></mu-icon>'s Library
+          </a>
         </span>
       </mu-appbar>
     </div>
