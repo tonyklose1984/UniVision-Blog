@@ -7,7 +7,7 @@
         z-depth="0"
         textColor="black"
       >
-        <span>
+        <span class="color">
           <a class="site_title" href="/">
             Fami
             <mu-icon
@@ -59,5 +59,11 @@ export default {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f8f8f8;
+}
+.color {
+  background-image: url("assets/logo-color.png");
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: right;
 }
 </style>

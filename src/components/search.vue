@@ -31,13 +31,18 @@
     <mu-container class="body-main">
       <mu-list
         textline="two-line"
-        v-for="article in result.data"
+        v-for="(article,index) in result.data"
         :key="article.id"
         @click="toArticle(article.id)"
       >
         <mu-list-item avatar :ripple="false" button>
           <mu-list-item-content>
-            <mu-list-item-title>{{article.title}}</mu-list-item-title>
+            <mu-list-item-title>
+              {{article.title}}
+              <span v-if="index == 0">
+                <mu-badge content="推荐" color="primary"></mu-badge>
+              </span>
+            </mu-list-item-title>
             <mu-list-item-sub-title>{{article.content.replace(/<[^>]*>/g,'').slice(0,50)+'...'}}</mu-list-item-sub-title>
           </mu-list-item-content>
         </mu-list-item>
@@ -53,7 +58,8 @@ export default {
   data() {
     return {
       keywords: this.$route.query.keywords,
-      result: []
+      result: [],
+      index: 0
     };
   },
   mounted() {
@@ -69,6 +75,7 @@ export default {
         .post("https://core.liujunyang.com/blog/articles/search", post)
         .then(function(res) {
           that.result = res.data;
+          console.log(that.result.data);
           loading.close();
         })
         .catch(function(res) {

@@ -59,16 +59,16 @@ p {
 }
 pre {
   font-family: "Roboto";
-  background-color: #f1f1f1;
+  background-color: rgba(102, 185, 240, 0.15);
   color: black;
-  border-left: 6px solid lightgrey;
+  border-left: 6px solid rgba(102, 185, 240, 0.4);
   padding: 5px 5px 5px 10px;
   font-size: 12px;
   margin: 20px 0;
 }
 code {
   font-family: "Roboto";
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(68, 151, 64, 0.8);
   color: rgba(255, 255, 255, 1);
   margin: 0 5px;
   padding: 2px 4px;
