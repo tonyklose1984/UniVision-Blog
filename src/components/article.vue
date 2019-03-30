@@ -23,7 +23,7 @@ export default {
   },
   mounted() {
     this.loadArticle(this.$route.query.id);
-    this.WXshare(location.href.split("#")[0].toLowerCase());
+    this.WXshare(location.href);
   },
   methods: {
     loadArticle(id) {

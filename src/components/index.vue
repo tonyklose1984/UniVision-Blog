@@ -55,8 +55,7 @@ export default {
     };
   },
   mounted() {
-    console.log(location.href);
-    this.WXshare(123);
+    this.WXshare(location.href);
   },
   methods: {
     toSearch(keywords) {
