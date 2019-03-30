@@ -15,7 +15,7 @@
               color="red"
               size="20"
               style="vertical-align: middle; margin:-3px 0 0 -5px;"
-            ></mu-icon>'s Library
+            ></mu-icon>'s Repository
           </a>
         </span>
       </mu-appbar>
