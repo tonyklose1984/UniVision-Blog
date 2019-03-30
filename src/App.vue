@@ -38,6 +38,11 @@ export default {
       open: false,
       position: "left"
     };
+  },
+  mounted() {
+    this.$router.afterEach((to, from, next) => {
+      window.scrollTo(0, 0);
+    });
   }
 };
 </script>
