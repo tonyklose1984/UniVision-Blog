@@ -45,12 +45,12 @@ export default {
   position: fixed;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
-  bottom: 10px;
-  padding-top: 10px;
+  bottom: 0;
+  padding: 10px 0;
   left: 0;
   right: 0;
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: #f8f8f8;
 }
 </style>
