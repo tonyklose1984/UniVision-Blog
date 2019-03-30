@@ -68,8 +68,8 @@ pre {
 }
 code {
   font-family: "Roboto";
-  background-color: rgba(250, 219, 223, 0.6);
-  color: rgba(245, 94, 115, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1);
   margin: 0 5px;
   padding: 2px 4px;
   border-radius: 4px;
