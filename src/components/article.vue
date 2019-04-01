@@ -55,6 +55,7 @@ export default {
 .doc-body {
   line-height: 30px;
   font-family: "Roboto";
+  margin-bottom: 100px;
 }
 /* 文档样式 */
 p {
