@@ -34,8 +34,8 @@
       </mu-row>
     </mu-container>
     <mu-container class="body-main">
-      <div class="slogan">我并非知晓一切，</div>
-      <div class="slogan">只是尽可能的分享所知道的一切。</div>
+      <div class="slogan">I don't know everything.</div>
+      <div class="slogan">Just share as much as I can.</div>
     </mu-container>
     <mu-container class="body-foot"></mu-container>
   </div>
