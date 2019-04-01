@@ -81,6 +81,7 @@ export default {
 .beian {
   display: flex;
   position: fixed;
+  cursor: pointer;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
   bottom: 0;
