@@ -5,13 +5,15 @@
         <mu-col class="center" span="10" sm="12" md="8" lg="8" xl="8">
           <div class="grid-cell">
             <mu-paper class="demo-paper index-search-div" :z-depth="4">
-              <input
-                class="index-search-div-input"
-                type="text"
-                placeholder="寻你所想..."
-                v-model="keywords"
-                @keyup.enter="search(keywords)"
-              >
+              <mu-tooltip content="我并非知晓一切，但我会尽力把我所知晓的一切分享给你。" placement="bottom-start">
+                <input
+                  class="index-search-div-input"
+                  type="text"
+                  placeholder="寻你所想..."
+                  v-model="keywords"
+                  @keyup.enter="search(keywords)"
+                >
+              </mu-tooltip>
               <mu-button
                 class="index-search-div-icon"
                 icon
@@ -70,19 +72,23 @@ export default {
   },
   methods: {
     search(keywords) {
-      let that = this;
-      let loading = this.$loading();
-      let post = { keywords: keywords };
-      this.$axios
-        .post("https://core.liujunyang.com/blog/articles/search", post)
-        .then(function(res) {
-          that.result = res.data;
-          console.log(that.result.data);
-          loading.close();
-        })
-        .catch(function(res) {
-          console.log(res);
-        });
+      if (this.keywords == "") {
+        this.$toast.message("搜索内容不能为空");
+      } else {
+        let that = this;
+        let loading = this.$loading();
+        let post = { keywords: keywords };
+        this.$axios
+          .post("https://core.liujunyang.com/blog/articles/search", post)
+          .then(function(res) {
+            that.result = res.data;
+            console.log(that.result.data);
+            loading.close();
+          })
+          .catch(function(res) {
+            console.log(res);
+          });
+      }
     },
     toArticle(id) {
       // this.$router.push({

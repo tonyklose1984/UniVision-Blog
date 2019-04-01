@@ -7,6 +7,7 @@ import axios from "axios";
 import Loading from "muse-ui-loading";
 import VueWechatTitle from "vue-wechat-title";
 import wx from "weixin-js-sdk";
+import Toast from "muse-ui-toast";
 import "muse-ui-loading/dist/muse-ui-loading.css";
 import "./font/font.css";
 import "muse-ui/dist/muse-ui.css";
@@ -15,8 +16,11 @@ import "typeface-roboto";
 Vue.use(MuseUI);
 Vue.use(Loading);
 Vue.use(VueWechatTitle);
+Vue.use(Toast);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
+
+import router from "./router";
 
 Vue.prototype.WXshare = function(url, title) {
   let oriUrl = location.href.split("#")[0].toLowerCase();
@@ -57,8 +61,6 @@ Vue.prototype.WXshare = function(url, title) {
     });
   });
 };
-
-import router from "./router";
 
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */

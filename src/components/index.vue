@@ -12,13 +12,15 @@
         <mu-col class="center" span="12" sm="12" md="8" lg="8" xl="8">
           <div class="grid-cell">
             <mu-paper class="demo-paper index-search-div" :z-depth="4">
-              <input
-                class="index-search-div-input"
-                type="text"
-                placeholder="寻你所想..."
-                v-model="keywords"
-                @keyup.enter="toSearch(keywords)"
-              >
+              <mu-tooltip content="我并非知晓一切，但我会尽力把我所知晓的一切分享给你。" placement="bottom-start">
+                <input
+                  class="index-search-div-input"
+                  type="text"
+                  placeholder="寻你所想..."
+                  v-model="keywords"
+                  @keyup.enter="toSearch(keywords)"
+                >
+              </mu-tooltip>
               <mu-button
                 class="index-search-div-icon"
                 icon
@@ -51,7 +53,11 @@ export default {
   },
   methods: {
     toSearch(keywords) {
-      this.$router.push({ name: "Search", query: { keywords: keywords } });
+      if (this.keywords == "") {
+        this.$toast.message("搜索内容不能为空");
+      } else {
+        this.$router.push({ name: "Search", query: { keywords: keywords } });
+      }
     }
   },
   watch: {

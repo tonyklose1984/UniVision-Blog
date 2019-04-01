@@ -24,8 +24,27 @@
       <router-view/>
     </div>
     <div class="beian">
+      <div @click="openBotttomSheet">联系我</div>
       <div>苏ICP备15006533号-4</div>
     </div>
+
+    <mu-bottom-sheet :open.sync="open" :lock-scroll="true">
+      <mu-list @item-click="closeBottomSheet">
+        <mu-sub-header>选择一种方式</mu-sub-header>
+        <mu-list-item button href="mailto:famio@qq.com">
+          <mu-list-item-action>
+            <mu-icon value="email" color="blue"></mu-icon>
+          </mu-list-item-action>
+          <mu-list-item-title>E-mail</mu-list-item-title>
+        </mu-list-item>
+        <mu-list-item button href="tencent://message/?uin=690938288&Site=liujunyang.com&Menu=yes">
+          <mu-list-item-action>
+            <mu-icon value="chat" color="blue"></mu-icon>
+          </mu-list-item-action>
+          <mu-list-item-title>QQ</mu-list-item-title>
+        </mu-list-item>
+      </mu-list>
+    </mu-bottom-sheet>
   </div>
 </template>
 
@@ -34,15 +53,21 @@ export default {
   name: "App",
   data() {
     return {
-      docked: false,
-      open: false,
-      position: "left"
+      open: false
     };
   },
   mounted() {
     this.$router.afterEach((to, from, next) => {
       window.scrollTo(0, 0);
     });
+  },
+  methods: {
+    closeBottomSheet() {
+      this.open = false;
+    },
+    openBotttomSheet() {
+      this.open = true;
+    }
   }
 };
 </script>
@@ -54,6 +79,7 @@ export default {
   text-shadow: 5px 1px 10px rgba(0, 0, 0, 0.2);
 }
 .beian {
+  display: flex;
   position: fixed;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
@@ -64,5 +90,8 @@ export default {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f8f8f8;
+}
+.beian >>> div {
+  margin: auto auto;
 }
 </style>
