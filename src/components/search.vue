@@ -29,6 +29,7 @@
       <mu-divider></mu-divider>
     </mu-container>
     <mu-container class="body-main">
+      <div v-if="show_empty_notice == 1" style="color:white;margin-top:20px;">Sorry...Nothing...</div>
       <mu-list
         textline="two-line"
         v-for="(article,index) in result.data"
@@ -61,7 +62,8 @@ export default {
     return {
       keywords: this.$route.query.keywords,
       result: [],
-      index: 0
+      index: 0,
+      show_empty_notice: 0
     };
   },
   mounted() {
@@ -80,7 +82,11 @@ export default {
           .post("https://core.liujunyang.com/blog/articles/search", post)
           .then(function(res) {
             that.result = res.data;
-            console.log(that.result.data);
+            if (that.result.data.length <= 0) {
+              that.show_empty_notice = 1;
+            } else {
+              that.show_empty_notice = 0;
+            }
             loading.close();
           })
           .catch(function(res) {
@@ -89,11 +95,6 @@ export default {
       }
     },
     toArticle(id) {
-      // this.$router.push({
-      //   name: "Article",
-      //   query: { id: id },
-      //   replace: true
-      // });
       let route = this.$router.resolve({
         name: "Article",
         query: { id: id },
