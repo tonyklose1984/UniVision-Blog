@@ -33,7 +33,10 @@
         </mu-col>
       </mu-row>
     </mu-container>
-    <mu-container class="body-main"></mu-container>
+    <mu-container class="body-main">
+      <div class="slogan">I don't know everything.</div>
+      <div class="slogan">Just share as much as I can.</div>
+    </mu-container>
     <mu-container class="body-foot"></mu-container>
   </div>
 </template>
@@ -118,5 +121,9 @@ export default {
 }
 .center {
   margin: auto auto;
+}
+.slogan {
+  color: white;
+  text-align: center;
 }
 </style>

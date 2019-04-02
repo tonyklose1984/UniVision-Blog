@@ -23,14 +23,14 @@
     <div>
       <router-view/>
     </div>
-    <div class="beian">
-      <div @click="openBotttomSheet">联系我</div>
+    <div class="beian" @click="openBotttomSheet">
       <div>苏ICP备15006533号-4</div>
+      <div>苏公网安备 32058102001468号</div>
     </div>
 
     <mu-bottom-sheet :open.sync="open" :lock-scroll="true">
       <mu-list @item-click="closeBottomSheet">
-        <mu-sub-header>选择一种方式</mu-sub-header>
+        <mu-sub-header>选择一种方式来联系我</mu-sub-header>
         <mu-list-item button href="mailto:famio@qq.com">
           <mu-list-item-action>
             <mu-icon value="email" color="blue"></mu-icon>
@@ -81,6 +81,7 @@ export default {
 .beian {
   display: flex;
   position: fixed;
+  cursor: pointer;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
   bottom: 0;
