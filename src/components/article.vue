@@ -80,6 +80,9 @@ code {
   font-weight: 300;
 }
 img {
-  border-radius: 8px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
 }
 </style>
