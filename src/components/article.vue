@@ -26,7 +26,6 @@ export default {
     document
       .querySelector("body")
       .setAttribute("style", "background: #fafafa;");
-    // this.WXshare(location.href, this.result.title);
   },
   methods: {
     loadArticle(id) {
@@ -69,6 +68,8 @@ pre {
   padding: 5px 5px 5px 10px;
   font-size: 12px;
   margin: 20px 0;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 code {
   font-family: "Roboto";
