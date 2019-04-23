@@ -7,7 +7,10 @@
         z-depth="4"
         textColor="white"
       >
-        <mu-button icon slot="left" href="https://github.com/FamioGit/UniVision-Blog">
+        <mu-button icon slot="left" @click="showAbout()">
+          <mu-icon value="info" color="white"></mu-icon>
+        </mu-button>
+        <mu-button icon slot="right" href="https://github.com/FamioGit/UniVision-Blog">
           <svg
             version="1.1"
             id="Layer_1"
@@ -44,6 +47,7 @@
               style="vertical-align: middle; margin:-3px 0 0 -5px;"
             ></mu-icon>'s Repository
           </a>
+          <a class="site_github" target="_blank"></a>
         </span>
       </mu-appbar>
     </div>
@@ -94,6 +98,12 @@ export default {
     },
     openBotttomSheet() {
       this.open = true;
+    },
+    showAbout() {
+      this.$alert(
+        "目前文章不够多，所以我不能保证您的关键字搜索一定有结果。但是，我会尽力长期的完善它！",
+        "搜索结果说明"
+      );
     }
   }
 };

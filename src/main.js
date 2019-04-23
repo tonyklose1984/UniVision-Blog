@@ -12,11 +12,14 @@ import "muse-ui-loading/dist/muse-ui-loading.css";
 import "./font/font.css";
 import "muse-ui/dist/muse-ui.css";
 import "typeface-roboto";
+import "muse-ui-message/dist/muse-ui-message.css";
+import Message from "muse-ui-message";
 
 Vue.use(MuseUI);
 Vue.use(Loading);
 Vue.use(VueWechatTitle);
 Vue.use(Toast);
+Vue.use(Message);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 
