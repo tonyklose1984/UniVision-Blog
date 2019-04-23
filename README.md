@@ -1,10 +1,10 @@
 # univision-blog
 
-> A Vue.js project
+> 一个基于 Vue.js 和 MuseUI 框架的开源博客知识库前端。首页是极简的搜索页，通过搜索结果跳转至文章页。
 
-## Build Setup
+## 快速开始
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -27,4 +27,6 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 演示地址
+
+https://www.liujunyang.com
