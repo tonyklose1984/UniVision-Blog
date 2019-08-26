@@ -18,7 +18,7 @@
                 placeholder="寻你所想..."
                 v-model="keywords"
                 @keyup.enter="toSearch(keywords)"
-              >
+              />
               <mu-button
                 class="index-search-div-icon"
                 icon
@@ -62,7 +62,7 @@ export default {
     }
   },
   watch: {
-    keywords: function(value, oldValue) {
+    keywords: function(value) {
       this.keywords = value;
     }
   }

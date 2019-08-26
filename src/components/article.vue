@@ -38,9 +38,7 @@ export default {
           that.result = res.data.data;
           loading.close();
         })
-        .catch(function(res) {
-          console.log(res);
-        });
+        .catch(function() {});
     }
   }
 };

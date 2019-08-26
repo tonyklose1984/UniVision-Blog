@@ -34,7 +34,7 @@
       c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
       c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
       c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"
-            ></path>
+            />
           </svg>
         </mu-button>
         <span class="color">
@@ -52,7 +52,7 @@
       </mu-appbar>
     </div>
     <div>
-      <router-view/>
+      <router-view />
     </div>
     <div class="beian" @click="openBotttomSheet">
       <div>苏ICP备15006533号-4</div>
@@ -88,7 +88,7 @@ export default {
     };
   },
   mounted() {
-    this.$router.afterEach((to, from, next) => {
+    this.$router.afterEach(() => {
       window.scrollTo(0, 0);
     });
   },

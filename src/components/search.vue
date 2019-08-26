@@ -11,7 +11,7 @@
                 placeholder="寻你所想..."
                 v-model="keywords"
                 @keyup.enter="search(keywords)"
-              >
+              />
               <mu-button
                 class="index-search-div-icon"
                 icon
@@ -89,9 +89,7 @@ export default {
             }
             loading.close();
           })
-          .catch(function(res) {
-            console.log(res);
-          });
+          .catch(function() {});
       }
     },
     toArticle(id) {

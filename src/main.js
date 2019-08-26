@@ -41,9 +41,7 @@ Vue.prototype.WXshare = function(url, title) {
         jsApiList: ["onMenuShareAppMessage", "onMenuShareTimeline"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
       });
     })
-    .catch(function(res) {
-      console.log(res);
-    });
+    .catch(function() {});
 
   wx.ready(function() {
     //需在用户可能点击分享按钮前就先调用
@@ -83,8 +81,6 @@ router.beforeEach((to, from, next) => {
 
 /* eslint-disable no-new */
 new Vue({
-  el: "#app",
   router,
-  components: { App },
-  template: "<App/>"
-});
+  render: h => h(App)
+}).$mount("#app");
