@@ -11,9 +11,9 @@ import Toast from "muse-ui-toast";
 import "muse-ui-loading/dist/muse-ui-loading.css";
 import "./font/font.css";
 import "muse-ui/dist/muse-ui.css";
-import "typeface-roboto";
 import "muse-ui-message/dist/muse-ui-message.css";
 import Message from "muse-ui-message";
+import "./assets/font/material-icons.css";
 
 Vue.use(MuseUI);
 Vue.use(Loading);
