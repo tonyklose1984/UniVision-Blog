@@ -30,7 +30,7 @@ Vue.prototype.WXshare = function(url, title) {
   let Base64 = require("js-base64").Base64;
   let site = Base64.encode(oriUrl);
   this.$axios
-    .get("https://core.liujunyang.com/api/weixin/share/" + site)
+    .get("https://core.liujunyang.com/api/wechat/share/" + site)
     .then(function(res) {
       wx.config({
         debug: false, // 开启调试模式,
