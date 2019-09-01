@@ -34,6 +34,7 @@ export default {
       this.$axios
         .get("https://core.liujunyang.com/blog/articles/" + id)
         .then(function(res) {
+          console.log(res.data.data);
           that.WXshare(
             location.href,
             "刘俊洋的知识库",
