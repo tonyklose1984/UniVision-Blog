@@ -25,7 +25,7 @@ Vue.prototype.$axios = axios;
 
 import router from "./router";
 
-Vue.prototype.WXshare = function(url, title) {
+Vue.prototype.WXshare = function(url, title, desc, image_url) {
   let oriUrl = location.href.split("#")[0].toLowerCase();
   let Base64 = require("js-base64").Base64;
   let site = Base64.encode(oriUrl);
@@ -33,7 +33,7 @@ Vue.prototype.WXshare = function(url, title) {
     .get("https://core.liujunyang.com/api/wechat/share/" + site)
     .then(function(res) {
       wx.config({
-        debug: true, // 开启调试模式,
+        debug: false, // 开启调试模式,
         appId: res.data.appid, // 必填，企业号的唯一标识，此处填写企业号corpid
         timestamp: res.data.timestamp, // 必填，生成签名的时间戳
         nonceStr: res.data.noncestr, // 必填，生成签名的随机串
@@ -47,17 +47,17 @@ Vue.prototype.WXshare = function(url, title) {
     //需在用户可能点击分享按钮前就先调用
     wx.onMenuShareAppMessage({
       title: title, // 分享标题
-      desc: "刘俊洋的知识库：分享一切尽可能让你看得懂的东西。", // 分享描述
+      desc: desc, // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
+      imgUrl: image_url, // 分享图标
       success: function() {}
     });
 
     wx.onMenuShareTimeline({
       title: title, // 分享标题
-      desc: "刘俊洋的知识库：分享一切尽可能让你看得懂的东西。", // 分享描述
+      desc: desc, // 分享描述
       link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: "https://www.liujunyang.com/static/images/wx_logo.png", // 分享图标
+      imgUrl: image_url, // 分享图标
       success: function() {}
     });
   });

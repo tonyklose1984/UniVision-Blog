@@ -68,7 +68,12 @@ export default {
   },
   mounted() {
     this.search(this.keywords);
-    this.WXshare(location.href, "搜索结果");
+    this.WXshare(
+      location.href,
+      "刘俊洋的知识库",
+      "搜索结果：" + this.keywords,
+      "https://unicore-1251406171.cos.ap-shanghai.myqcloud.com/blog/logo-boy.png"
+    );
   },
   methods: {
     search(keywords) {

@@ -50,7 +50,12 @@ export default {
     };
   },
   mounted() {
-    this.WXshare(location.href, "刘俊洋的知识库");
+    this.WXshare(
+      location.href,
+      "刘俊洋的知识库",
+      "分享一切尽可能让你看得懂的东西。",
+      "https://unicore-1251406171.cos.ap-shanghai.myqcloud.com/blog/logo-boy.png"
+    );
   },
   methods: {
     toSearch(keywords) {
